@@ -19,16 +19,23 @@ app.use(express.static(publicDir));
 app.get("", (req, res) => {
   res.render("index", {
     title: "Home",
-    name: "Thaveesha yanith",
-    age: 30,
-    occupation: "Software Developer",
   });
 });
 app.get("/about", (req, res) => {
   res.render("about", {
-    title: "About page",
+    title: "About the Weather App",
+    name: "Thaveesha Yanith",
+    occupation: "Software Developer",
     description:
-      "We are a small company dedicated to providing the best service to our customers.",
+      "Our weather app provides real-time weather updates and forecasts, making it easier for users to stay informed about the weather conditions anywhere in the world.",
+    mission:
+      "We aim to deliver the most accurate and timely weather information using trusted data sources, ensuring the best service for our users.",
+    features: [
+      "Real-time weather updates",
+      "Weather forecasts",
+      "Easy-to-use interface",
+      "Global coverage",
+    ],
   });
 });
 app.get("/contact", (req, res) => {

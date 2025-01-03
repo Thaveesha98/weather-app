@@ -1,4 +1,3 @@
-console.log("Client-side JavaScript is available");
 const endPoint = "weather";
 const address = document.querySelector("input");
 const area = document.querySelector("#location");

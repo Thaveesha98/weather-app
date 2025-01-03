@@ -1,8 +1,8 @@
 const request = require("postman-request");
+require("dotenv").config();
 
 const geocode = (address, callback) => {
-  const url = `https://api.mapbox.com/geocoding/v5/mapbox.places/${address}.json?access_token=pk.eyJ1IjoidGhhdmVlc2hhOTgiLCJhIjoiY201YzR3Y2UyMGhxYTJrcjN5eG5nb2JtYiJ9.V8v5s3mFkZmlVw0oMrnhxg&limit=1`;
-
+  const url = `https://api.mapbox.com/geocoding/v5/mapbox.places/${address}.json?access_token=${process.env.MAPBOX_ACCESS_TOKEN}&limit=1`;
   request({ url, json: true }, (error, { body }) => {
     if (error) {
       callback("Unable to connect to location services!", undefined);
@@ -25,9 +25,7 @@ const geocode = (address, callback) => {
 };
 
 const weather = (location = "new york", callback) => {
-  const access_token = "5323a5714fecee662e0e9b00801fb6d3";
-  const url = `https://api.weatherstack.com/current?access_key=${access_token}&query=${location}`;
-
+  const url = `https://api.weatherstack.com/current?access_key=${process.env.WEATHERSTACK_ACCESS_KEY}&query=${location}`;
   request({ url, json: true }, (error, { body }) => {
     if (error) {
       callback("Unable to connect to the weather service!", undefined);

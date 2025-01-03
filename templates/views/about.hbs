@@ -1,19 +1,38 @@
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" href="img/logo.png" type="image/x-icon">
+    <link rel="icon" href="img/logo.png" type="image/x-icon" />
     <title>{{title}}</title>
     <link rel="stylesheet" href="./css/styles.css" />
   </head>
   <body>
     <header>
-         {{>header}}
-   </header>
+      {{> header}}
+    </header>
+    
     <main>
-      <p>{{description}}</p>
-    </main>
-        {{>footer}}
+      <section class="about-section">
+        <h1>About the Weather App</h1>
+        <p>{{description}}</p>
+        
+        <h2>Mission</h2>
+        <p>{{mission}}</p>
+        
+        <h2>Created by:</h2>
+        <p><strong>{{name}}</strong></p>
+        <p>Occupation: {{occupation}}</p>
 
+        <h2>Features:</h2>
+        <ul>
+          {{#each features}}
+            <li>{{this}}</li>
+          {{/each}}
+        </ul>
+      </section>
+    </main>
+
+    {{> footer}}
   </body>
 </html>
