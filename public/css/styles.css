@@ -1,0 +1,122 @@
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+header {
+  background: #333;
+  color: #fff;
+  padding: 1rem 0;
+  text-align: center;
+}
+
+header h1 {
+  margin: 0;
+}
+
+nav {
+  margin-top: 0.5rem;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 10px;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* Main Content */
+main {
+  padding: 1.5rem;
+  background: #fff;
+  margin: 1rem auto;
+  width: 90%;
+  max-width: 800px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+}
+
+main p {
+  margin: 1rem 0;
+}
+
+/* Forms */
+form {
+  margin-top: 1rem;
+}
+
+form label {
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+form input,
+form textarea {
+  width: 100%;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+form button {
+  padding: 0.5rem 1rem;
+  background: #333;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+form button:hover {
+  background: #555;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  background: #333;
+  color: #fff;
+  padding: 1rem 0;
+  margin-top: 1rem;
+}
+
+footer p {
+  margin: 0;
+}
+.imgWrapper {
+  display: flex;
+  justify-content: center;
+  gap: 2%;
+}
+img {
+  height: 30dvh;
+  width: fit-content;
+  display: flex;
+  justify-content: center;
+  padding-top: 2%;
+}
+/* Responsive Design */
+@media (max-width: 600px) {
+  main {
+    width: 95%;
+  }
+
+  nav {
+    display: block;
+    margin-top: 1rem;
+  }
+
+  nav a {
+    display: block;
+    margin: 5px 0;
+  }
+}

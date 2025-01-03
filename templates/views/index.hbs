@@ -1,0 +1,38 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="img/logo.png" type="image/x-icon">
+    <title>{{title}}</title>
+    <link rel="stylesheet" href="./css/styles.css" />
+  </head>
+  <body>
+ 
+    <header>
+         {{>header}}
+      
+    </header>
+    <div class="imgWrapper">
+
+      <img src="../img/weathericons.png" alt="weather icons">
+      <img src="../img/Brideicons.png" alt="weather icons">
+    </div>
+    <main>
+      <p>This is the home page. Explore the links above to learn more about us.</p>
+      <form>
+        <input type="text" placeholder="Enter location">
+        <button type="submit">Search</button>
+      </form>
+      <p id="location"></p>
+      <p id="weatherCondition"></p>
+      <p id="temp"></p>
+      <p id="feelslike"></p>
+      <p id="humidity"></p>
+      <p>Created by : {{name}}</p>
+      
+    </main>
+    {{>footer}}
+    <script src="./scripts/home.js"></script>
+
+  </body>
+</html>
