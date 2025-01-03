@@ -18,7 +18,7 @@ app.use(express.static(publicDir));
 
 app.get("", (req, res) => {
   res.render("index", {
-    title: "Home",
+    title: "Weather App",
   });
 });
 app.get("/about", (req, res) => {
