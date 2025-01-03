@@ -1,8 +1,10 @@
 const path = require("path");
 const express = require("express");
-const app = express();
 const hbs = require("hbs");
 const { geocode, weather } = require("../utils/geocode");
+
+const app = express();
+const port = process.env.PORT || 3000;
 
 const publicDir = path.join(__dirname, "../public");
 const pathViews = path.join(__dirname, "../templates/views");
@@ -83,7 +85,6 @@ app.get("*", (req, res) => {
     description: "The page you're looking for cannot be found.",
   });
 });
-const port = 3000;
 
 app.listen(port, () => {
   console.log(`server listening on ${port}`);

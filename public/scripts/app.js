@@ -1,5 +1,5 @@
 console.log("Client side javascript is available");
-const endPoint = "http://localhost:3000/weather";
+const endPoint = "weather";
 const address = document.querySelector("input");
 const area = document.querySelector("#location");
 const weatherCondition = document.querySelector("#weatherCondition");
